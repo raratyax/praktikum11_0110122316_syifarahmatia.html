@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px 350px;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function image_picker(){
+            let pilihan = document.getElementById("select").value;
+            const list_image = ["awanungu.jpg", "bungaungu.jpeg", "kucingungu.jpg", "tasungu.jpg", "gaunungu.jpg", "bukuungu.jpg"];
+            if(pilihan == "awanungu"){
+                let select = list_image[0];
+                document.getElementById("image").src = `images/${select}`
+            }
+
+            if(pilihan == "bungaungu"){
+                let select = list_image[1];
+                document.getElementById("image").src = `images/${select}`
+            }
+
+            if(pilihan == "kucingungu"){
+                let select = list_image[2];
+                document.getElementById("image").src = `images/${select}`
+            }
+
+            if(pilihan == "tasungu"){
+                let select = list_image[3];
+                document.getElementById("image").src = `images/${select}`
+            }
+
+            if(pilihan == "gaunungu"){
+                let select = list_image[4];
+                document.getElementById("image").src = `images/${select}`
+            }
+
+            if(pilihan == "bukuungu"){
+                let select = list_image[5];
+                document.getElementById("image").src = `images/${select}`
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="select" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="awanungu">Awan Ungu</option>
+        <option value="bungaungu">Bunga Ungu</option>
+        <option value="kucingungu">Kucing Ungu</option>
+        <option value="tasungu">Tas Ungu</option>
+        <option value="gaunungu">Gaun Ungu</option>
+        <option value="bukuungu">Buku Ungu</option>
+    </select>
+    <br>
+    <div class="container">
+        <div class="box">
+            <img id="image">
+        </div>
+    </div>
+</body>
+</html>
